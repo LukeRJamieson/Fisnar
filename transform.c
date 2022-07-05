@@ -7,22 +7,22 @@ struct point {
 };
 
 
-struct point transform(struct point ref, struct point target, double theta)
+struct point transform(struct point fisnar_ref, struct point gerber_ref, struct point gerber_target, double theta)
 {
     double angle = theta * M_PI / 180;
     // Target Point translation position referred to refernce point (Fiducial 1)
-    target.x -= ref.x;
-    target.y -= ref.y;
+    gerber_target.x -= gerber_ref.x;
+    gerber_target.y -= gerber_ref.y;
     // Copy referred target points for rotation
-    int x = target.x;
-    int y = target.y;
+    int x = gerber_target.x;
+    int y = gerber_target.y;
     // Perform rotation
-    target.x = x * cos(angle) - y * sin(angle);
-    target.y = x * sin(angle) + y * cos(angle);
+    gerber_target.x = x * cos(angle) - y * sin(angle);
+    gerber_target.y = x * sin(angle) + y * cos(angle);
     // Target Point translation position referred to fisnar origin
-    target.x +=  ref.x;
-    target.y +=  ref.y;
-    return target;
+    gerber_target.x = gerber_target.x + fisnar_ref.x;
+    gerber_target.y = gerber_target.y + fisnar_ref.y;
+    return gerber_target;
 }
 
 void enter_point(struct point *p)
@@ -35,15 +35,17 @@ void enter_point(struct point *p)
 
 int main()
 {
-    struct point ref, target;
+    struct point fisnar, ref, target;
     double theta;
-    printf("\nEnter reference point: ");
+    printf("\nEnter Fisnar reference point: ");
+    enter_point(&fisnar);
+    printf("\nEnter Gerber reference point: ");
     enter_point(&ref);
-    printf("\nEnter target point: ");
+    printf("\nEnter Gerber target point: ");
     enter_point(&target);
     printf("\nEnter theta (in degrees): ");
     scanf("%lf", &theta);
-    struct point tp = transform(ref, target, theta);
+    struct point tp = transform(fisnar, ref, target, theta);
     printf("\nTranformed points:\n");
     printf("x: %ld\ny: %ld\n", tp.x, tp.y);
 
