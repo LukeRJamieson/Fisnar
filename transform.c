@@ -37,12 +37,16 @@ int main()
 {
     struct point fisnar, ref, target;
     double theta;
+    // Where is Fiducial 1 location on the Fisnar plate ?
     printf("\nEnter Fisnar reference point: ");
     enter_point(&fisnar);
+    // Where is Fiducial 1 location on the Gerber file ?
     printf("\nEnter Gerber reference point: ");
     enter_point(&ref);
+    // Where is target location on the Gerber file ?
     printf("\nEnter Gerber target point: ");
     enter_point(&target);
+    // How much has the board been rotated (anti-clockwise) ?
     printf("\nEnter theta (in degrees): ");
     scanf("%lf", &theta);
     struct point tp = transform(fisnar, ref, target, theta);
