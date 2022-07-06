@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at MotorControl.v(46): always construct contains both blocking and non-blocking assignments File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 46

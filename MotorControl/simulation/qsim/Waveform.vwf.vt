@@ -1,0 +1,1413 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "07/06/2022 20:59:05"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          MotorControl
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module MotorControl_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg AWOff;
+reg CW_polarity;
+reg Enable;
+reg Home;
+reg LS;
+reg [31:0] Target;
+reg [31:0] accel_steps;
+reg clk;
+reg [31:0] home_location;
+reg [31:0] lower_limit;
+reg [31:0] max_speed_count;
+reg [31:0] min_speed_count;
+reg rst;
+reg [31:0] speed_increment;
+reg [31:0] upper_limit;
+// wires                                               
+wire CCW;
+wire CW;
+wire Done;
+wire [31:0] Location;
+
+// assign statements (if any)                          
+MotorControl i1 (
+// port map - connection between master ports and signals/registers   
+	.AWOff(AWOff),
+	.CCW(CCW),
+	.CW(CW),
+	.CW_polarity(CW_polarity),
+	.Done(Done),
+	.Enable(Enable),
+	.Home(Home),
+	.LS(LS),
+	.Location(Location),
+	.Target(Target),
+	.accel_steps(accel_steps),
+	.clk(clk),
+	.home_location(home_location),
+	.lower_limit(lower_limit),
+	.max_speed_count(max_speed_count),
+	.min_speed_count(min_speed_count),
+	.rst(rst),
+	.speed_increment(speed_increment),
+	.upper_limit(upper_limit)
+);
+initial 
+begin 
+#4000000 $finish;
+end 
+
+// AWOff
+initial
+begin
+	AWOff = 1'b0;
+end 
+
+// CW_polarity
+initial
+begin
+	CW_polarity = 1'b1;
+end 
+
+// Enable
+initial
+begin
+	Enable = 1'b1;
+end 
+
+// Home
+initial
+begin
+	Home = 1'b1;
+	Home = #40000 1'b0;
+end 
+
+// LS
+initial
+begin
+	LS = 1'b1;
+	LS = #40000 1'b0;
+end 
+// Target[ 31 ]
+initial
+begin
+	Target[31] = 1'b0;
+end 
+// Target[ 30 ]
+initial
+begin
+	Target[30] = 1'b0;
+end 
+// Target[ 29 ]
+initial
+begin
+	Target[29] = 1'b0;
+end 
+// Target[ 28 ]
+initial
+begin
+	Target[28] = 1'b0;
+end 
+// Target[ 27 ]
+initial
+begin
+	Target[27] = 1'b0;
+end 
+// Target[ 26 ]
+initial
+begin
+	Target[26] = 1'b0;
+end 
+// Target[ 25 ]
+initial
+begin
+	Target[25] = 1'b0;
+end 
+// Target[ 24 ]
+initial
+begin
+	Target[24] = 1'b0;
+end 
+// Target[ 23 ]
+initial
+begin
+	Target[23] = 1'b0;
+end 
+// Target[ 22 ]
+initial
+begin
+	Target[22] = 1'b0;
+end 
+// Target[ 21 ]
+initial
+begin
+	Target[21] = 1'b0;
+end 
+// Target[ 20 ]
+initial
+begin
+	Target[20] = 1'b0;
+end 
+// Target[ 19 ]
+initial
+begin
+	Target[19] = 1'b0;
+end 
+// Target[ 18 ]
+initial
+begin
+	Target[18] = 1'b0;
+end 
+// Target[ 17 ]
+initial
+begin
+	Target[17] = 1'b0;
+end 
+// Target[ 16 ]
+initial
+begin
+	Target[16] = 1'b0;
+end 
+// Target[ 15 ]
+initial
+begin
+	Target[15] = 1'b0;
+end 
+// Target[ 14 ]
+initial
+begin
+	Target[14] = 1'b0;
+end 
+// Target[ 13 ]
+initial
+begin
+	Target[13] = 1'b0;
+end 
+// Target[ 12 ]
+initial
+begin
+	Target[12] = 1'b0;
+end 
+// Target[ 11 ]
+initial
+begin
+	Target[11] = 1'b0;
+end 
+// Target[ 10 ]
+initial
+begin
+	Target[10] = 1'b0;
+end 
+// Target[ 9 ]
+initial
+begin
+	Target[9] = 1'b0;
+end 
+// Target[ 8 ]
+initial
+begin
+	Target[8] = 1'b0;
+end 
+// Target[ 7 ]
+initial
+begin
+	Target[7] = 1'b0;
+end 
+// Target[ 6 ]
+initial
+begin
+	Target[6] = 1'b0;
+end 
+// Target[ 5 ]
+initial
+begin
+	Target[5] = 1'b0;
+	Target[5] = #40000 1'b1;
+	Target[5] = #1960000 1'b0;
+end 
+// Target[ 4 ]
+initial
+begin
+	Target[4] = 1'b0;
+end 
+// Target[ 3 ]
+initial
+begin
+	Target[3] = 1'b0;
+end 
+// Target[ 2 ]
+initial
+begin
+	Target[2] = 1'b0;
+end 
+// Target[ 1 ]
+initial
+begin
+	Target[1] = 1'b0;
+	Target[1] = #40000 1'b1;
+	Target[1] = #1960000 1'b0;
+end 
+// Target[ 0 ]
+initial
+begin
+	Target[0] = 1'b0;
+	Target[0] = #40000 1'b1;
+	Target[0] = #1960000 1'b0;
+end 
+// accel_steps[ 31 ]
+initial
+begin
+	accel_steps[31] = 1'b0;
+end 
+// accel_steps[ 30 ]
+initial
+begin
+	accel_steps[30] = 1'b0;
+end 
+// accel_steps[ 29 ]
+initial
+begin
+	accel_steps[29] = 1'b0;
+end 
+// accel_steps[ 28 ]
+initial
+begin
+	accel_steps[28] = 1'b0;
+end 
+// accel_steps[ 27 ]
+initial
+begin
+	accel_steps[27] = 1'b0;
+end 
+// accel_steps[ 26 ]
+initial
+begin
+	accel_steps[26] = 1'b0;
+end 
+// accel_steps[ 25 ]
+initial
+begin
+	accel_steps[25] = 1'b0;
+end 
+// accel_steps[ 24 ]
+initial
+begin
+	accel_steps[24] = 1'b0;
+end 
+// accel_steps[ 23 ]
+initial
+begin
+	accel_steps[23] = 1'b0;
+end 
+// accel_steps[ 22 ]
+initial
+begin
+	accel_steps[22] = 1'b0;
+end 
+// accel_steps[ 21 ]
+initial
+begin
+	accel_steps[21] = 1'b0;
+end 
+// accel_steps[ 20 ]
+initial
+begin
+	accel_steps[20] = 1'b0;
+end 
+// accel_steps[ 19 ]
+initial
+begin
+	accel_steps[19] = 1'b0;
+end 
+// accel_steps[ 18 ]
+initial
+begin
+	accel_steps[18] = 1'b0;
+end 
+// accel_steps[ 17 ]
+initial
+begin
+	accel_steps[17] = 1'b0;
+end 
+// accel_steps[ 16 ]
+initial
+begin
+	accel_steps[16] = 1'b0;
+end 
+// accel_steps[ 15 ]
+initial
+begin
+	accel_steps[15] = 1'b0;
+end 
+// accel_steps[ 14 ]
+initial
+begin
+	accel_steps[14] = 1'b0;
+end 
+// accel_steps[ 13 ]
+initial
+begin
+	accel_steps[13] = 1'b0;
+end 
+// accel_steps[ 12 ]
+initial
+begin
+	accel_steps[12] = 1'b0;
+end 
+// accel_steps[ 11 ]
+initial
+begin
+	accel_steps[11] = 1'b0;
+end 
+// accel_steps[ 10 ]
+initial
+begin
+	accel_steps[10] = 1'b0;
+end 
+// accel_steps[ 9 ]
+initial
+begin
+	accel_steps[9] = 1'b0;
+end 
+// accel_steps[ 8 ]
+initial
+begin
+	accel_steps[8] = 1'b0;
+end 
+// accel_steps[ 7 ]
+initial
+begin
+	accel_steps[7] = 1'b0;
+end 
+// accel_steps[ 6 ]
+initial
+begin
+	accel_steps[6] = 1'b0;
+end 
+// accel_steps[ 5 ]
+initial
+begin
+	accel_steps[5] = 1'b0;
+end 
+// accel_steps[ 4 ]
+initial
+begin
+	accel_steps[4] = 1'b0;
+end 
+// accel_steps[ 3 ]
+initial
+begin
+	accel_steps[3] = 1'b1;
+end 
+// accel_steps[ 2 ]
+initial
+begin
+	accel_steps[2] = 1'b0;
+end 
+// accel_steps[ 1 ]
+initial
+begin
+	accel_steps[1] = 1'b1;
+end 
+// accel_steps[ 0 ]
+initial
+begin
+	accel_steps[0] = 1'b0;
+end 
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #1000 1'b1;
+	#1000;
+end 
+// home_location[ 31 ]
+initial
+begin
+	home_location[31] = 1'b0;
+end 
+// home_location[ 30 ]
+initial
+begin
+	home_location[30] = 1'b0;
+end 
+// home_location[ 29 ]
+initial
+begin
+	home_location[29] = 1'b0;
+end 
+// home_location[ 28 ]
+initial
+begin
+	home_location[28] = 1'b0;
+end 
+// home_location[ 27 ]
+initial
+begin
+	home_location[27] = 1'b0;
+end 
+// home_location[ 26 ]
+initial
+begin
+	home_location[26] = 1'b0;
+end 
+// home_location[ 25 ]
+initial
+begin
+	home_location[25] = 1'b0;
+end 
+// home_location[ 24 ]
+initial
+begin
+	home_location[24] = 1'b0;
+end 
+// home_location[ 23 ]
+initial
+begin
+	home_location[23] = 1'b0;
+end 
+// home_location[ 22 ]
+initial
+begin
+	home_location[22] = 1'b0;
+end 
+// home_location[ 21 ]
+initial
+begin
+	home_location[21] = 1'b0;
+end 
+// home_location[ 20 ]
+initial
+begin
+	home_location[20] = 1'b0;
+end 
+// home_location[ 19 ]
+initial
+begin
+	home_location[19] = 1'b0;
+end 
+// home_location[ 18 ]
+initial
+begin
+	home_location[18] = 1'b0;
+end 
+// home_location[ 17 ]
+initial
+begin
+	home_location[17] = 1'b0;
+end 
+// home_location[ 16 ]
+initial
+begin
+	home_location[16] = 1'b0;
+end 
+// home_location[ 15 ]
+initial
+begin
+	home_location[15] = 1'b0;
+end 
+// home_location[ 14 ]
+initial
+begin
+	home_location[14] = 1'b0;
+end 
+// home_location[ 13 ]
+initial
+begin
+	home_location[13] = 1'b0;
+end 
+// home_location[ 12 ]
+initial
+begin
+	home_location[12] = 1'b0;
+end 
+// home_location[ 11 ]
+initial
+begin
+	home_location[11] = 1'b0;
+end 
+// home_location[ 10 ]
+initial
+begin
+	home_location[10] = 1'b0;
+end 
+// home_location[ 9 ]
+initial
+begin
+	home_location[9] = 1'b0;
+end 
+// home_location[ 8 ]
+initial
+begin
+	home_location[8] = 1'b0;
+end 
+// home_location[ 7 ]
+initial
+begin
+	home_location[7] = 1'b0;
+end 
+// home_location[ 6 ]
+initial
+begin
+	home_location[6] = 1'b0;
+end 
+// home_location[ 5 ]
+initial
+begin
+	home_location[5] = 1'b0;
+end 
+// home_location[ 4 ]
+initial
+begin
+	home_location[4] = 1'b0;
+end 
+// home_location[ 3 ]
+initial
+begin
+	home_location[3] = 1'b0;
+end 
+// home_location[ 2 ]
+initial
+begin
+	home_location[2] = 1'b0;
+end 
+// home_location[ 1 ]
+initial
+begin
+	home_location[1] = 1'b0;
+end 
+// home_location[ 0 ]
+initial
+begin
+	home_location[0] = 1'b0;
+end 
+// lower_limit[ 31 ]
+initial
+begin
+	lower_limit[31] = 1'b0;
+end 
+// lower_limit[ 30 ]
+initial
+begin
+	lower_limit[30] = 1'b0;
+end 
+// lower_limit[ 29 ]
+initial
+begin
+	lower_limit[29] = 1'b0;
+end 
+// lower_limit[ 28 ]
+initial
+begin
+	lower_limit[28] = 1'b0;
+end 
+// lower_limit[ 27 ]
+initial
+begin
+	lower_limit[27] = 1'b0;
+end 
+// lower_limit[ 26 ]
+initial
+begin
+	lower_limit[26] = 1'b0;
+end 
+// lower_limit[ 25 ]
+initial
+begin
+	lower_limit[25] = 1'b0;
+end 
+// lower_limit[ 24 ]
+initial
+begin
+	lower_limit[24] = 1'b0;
+end 
+// lower_limit[ 23 ]
+initial
+begin
+	lower_limit[23] = 1'b0;
+end 
+// lower_limit[ 22 ]
+initial
+begin
+	lower_limit[22] = 1'b0;
+end 
+// lower_limit[ 21 ]
+initial
+begin
+	lower_limit[21] = 1'b0;
+end 
+// lower_limit[ 20 ]
+initial
+begin
+	lower_limit[20] = 1'b0;
+end 
+// lower_limit[ 19 ]
+initial
+begin
+	lower_limit[19] = 1'b0;
+end 
+// lower_limit[ 18 ]
+initial
+begin
+	lower_limit[18] = 1'b0;
+end 
+// lower_limit[ 17 ]
+initial
+begin
+	lower_limit[17] = 1'b0;
+end 
+// lower_limit[ 16 ]
+initial
+begin
+	lower_limit[16] = 1'b0;
+end 
+// lower_limit[ 15 ]
+initial
+begin
+	lower_limit[15] = 1'b0;
+end 
+// lower_limit[ 14 ]
+initial
+begin
+	lower_limit[14] = 1'b0;
+end 
+// lower_limit[ 13 ]
+initial
+begin
+	lower_limit[13] = 1'b0;
+end 
+// lower_limit[ 12 ]
+initial
+begin
+	lower_limit[12] = 1'b0;
+end 
+// lower_limit[ 11 ]
+initial
+begin
+	lower_limit[11] = 1'b0;
+end 
+// lower_limit[ 10 ]
+initial
+begin
+	lower_limit[10] = 1'b0;
+end 
+// lower_limit[ 9 ]
+initial
+begin
+	lower_limit[9] = 1'b0;
+end 
+// lower_limit[ 8 ]
+initial
+begin
+	lower_limit[8] = 1'b0;
+end 
+// lower_limit[ 7 ]
+initial
+begin
+	lower_limit[7] = 1'b0;
+end 
+// lower_limit[ 6 ]
+initial
+begin
+	lower_limit[6] = 1'b0;
+end 
+// lower_limit[ 5 ]
+initial
+begin
+	lower_limit[5] = 1'b0;
+end 
+// lower_limit[ 4 ]
+initial
+begin
+	lower_limit[4] = 1'b0;
+end 
+// lower_limit[ 3 ]
+initial
+begin
+	lower_limit[3] = 1'b0;
+end 
+// lower_limit[ 2 ]
+initial
+begin
+	lower_limit[2] = 1'b0;
+end 
+// lower_limit[ 1 ]
+initial
+begin
+	lower_limit[1] = 1'b0;
+end 
+// lower_limit[ 0 ]
+initial
+begin
+	lower_limit[0] = 1'b0;
+end 
+// min_speed_count[ 31 ]
+initial
+begin
+	min_speed_count[31] = 1'b0;
+end 
+// min_speed_count[ 30 ]
+initial
+begin
+	min_speed_count[30] = 1'b0;
+end 
+// min_speed_count[ 29 ]
+initial
+begin
+	min_speed_count[29] = 1'b0;
+end 
+// min_speed_count[ 28 ]
+initial
+begin
+	min_speed_count[28] = 1'b0;
+end 
+// min_speed_count[ 27 ]
+initial
+begin
+	min_speed_count[27] = 1'b0;
+end 
+// min_speed_count[ 26 ]
+initial
+begin
+	min_speed_count[26] = 1'b0;
+end 
+// min_speed_count[ 25 ]
+initial
+begin
+	min_speed_count[25] = 1'b0;
+end 
+// min_speed_count[ 24 ]
+initial
+begin
+	min_speed_count[24] = 1'b0;
+end 
+// min_speed_count[ 23 ]
+initial
+begin
+	min_speed_count[23] = 1'b0;
+end 
+// min_speed_count[ 22 ]
+initial
+begin
+	min_speed_count[22] = 1'b0;
+end 
+// min_speed_count[ 21 ]
+initial
+begin
+	min_speed_count[21] = 1'b0;
+end 
+// min_speed_count[ 20 ]
+initial
+begin
+	min_speed_count[20] = 1'b0;
+end 
+// min_speed_count[ 19 ]
+initial
+begin
+	min_speed_count[19] = 1'b0;
+end 
+// min_speed_count[ 18 ]
+initial
+begin
+	min_speed_count[18] = 1'b0;
+end 
+// min_speed_count[ 17 ]
+initial
+begin
+	min_speed_count[17] = 1'b0;
+end 
+// min_speed_count[ 16 ]
+initial
+begin
+	min_speed_count[16] = 1'b0;
+end 
+// min_speed_count[ 15 ]
+initial
+begin
+	min_speed_count[15] = 1'b0;
+end 
+// min_speed_count[ 14 ]
+initial
+begin
+	min_speed_count[14] = 1'b0;
+end 
+// min_speed_count[ 13 ]
+initial
+begin
+	min_speed_count[13] = 1'b0;
+end 
+// min_speed_count[ 12 ]
+initial
+begin
+	min_speed_count[12] = 1'b0;
+end 
+// min_speed_count[ 11 ]
+initial
+begin
+	min_speed_count[11] = 1'b0;
+end 
+// min_speed_count[ 10 ]
+initial
+begin
+	min_speed_count[10] = 1'b0;
+end 
+// min_speed_count[ 9 ]
+initial
+begin
+	min_speed_count[9] = 1'b0;
+end 
+// min_speed_count[ 8 ]
+initial
+begin
+	min_speed_count[8] = 1'b0;
+end 
+// min_speed_count[ 7 ]
+initial
+begin
+	min_speed_count[7] = 1'b0;
+end 
+// min_speed_count[ 6 ]
+initial
+begin
+	min_speed_count[6] = 1'b0;
+end 
+// min_speed_count[ 5 ]
+initial
+begin
+	min_speed_count[5] = 1'b0;
+end 
+// min_speed_count[ 4 ]
+initial
+begin
+	min_speed_count[4] = 1'b1;
+end 
+// min_speed_count[ 3 ]
+initial
+begin
+	min_speed_count[3] = 1'b1;
+end 
+// min_speed_count[ 2 ]
+initial
+begin
+	min_speed_count[2] = 1'b0;
+end 
+// min_speed_count[ 1 ]
+initial
+begin
+	min_speed_count[1] = 1'b0;
+end 
+// min_speed_count[ 0 ]
+initial
+begin
+	min_speed_count[0] = 1'b1;
+end 
+
+// rst
+initial
+begin
+	rst = 1'b0;
+end 
+// speed_increment[ 31 ]
+initial
+begin
+	speed_increment[31] = 1'b0;
+end 
+// speed_increment[ 30 ]
+initial
+begin
+	speed_increment[30] = 1'b0;
+end 
+// speed_increment[ 29 ]
+initial
+begin
+	speed_increment[29] = 1'b0;
+end 
+// speed_increment[ 28 ]
+initial
+begin
+	speed_increment[28] = 1'b0;
+end 
+// speed_increment[ 27 ]
+initial
+begin
+	speed_increment[27] = 1'b0;
+end 
+// speed_increment[ 26 ]
+initial
+begin
+	speed_increment[26] = 1'b0;
+end 
+// speed_increment[ 25 ]
+initial
+begin
+	speed_increment[25] = 1'b0;
+end 
+// speed_increment[ 24 ]
+initial
+begin
+	speed_increment[24] = 1'b0;
+end 
+// speed_increment[ 23 ]
+initial
+begin
+	speed_increment[23] = 1'b0;
+end 
+// speed_increment[ 22 ]
+initial
+begin
+	speed_increment[22] = 1'b0;
+end 
+// speed_increment[ 21 ]
+initial
+begin
+	speed_increment[21] = 1'b0;
+end 
+// speed_increment[ 20 ]
+initial
+begin
+	speed_increment[20] = 1'b0;
+end 
+// speed_increment[ 19 ]
+initial
+begin
+	speed_increment[19] = 1'b0;
+end 
+// speed_increment[ 18 ]
+initial
+begin
+	speed_increment[18] = 1'b0;
+end 
+// speed_increment[ 17 ]
+initial
+begin
+	speed_increment[17] = 1'b0;
+end 
+// speed_increment[ 16 ]
+initial
+begin
+	speed_increment[16] = 1'b0;
+end 
+// speed_increment[ 15 ]
+initial
+begin
+	speed_increment[15] = 1'b0;
+end 
+// speed_increment[ 14 ]
+initial
+begin
+	speed_increment[14] = 1'b0;
+end 
+// speed_increment[ 13 ]
+initial
+begin
+	speed_increment[13] = 1'b0;
+end 
+// speed_increment[ 12 ]
+initial
+begin
+	speed_increment[12] = 1'b0;
+end 
+// speed_increment[ 11 ]
+initial
+begin
+	speed_increment[11] = 1'b0;
+end 
+// speed_increment[ 10 ]
+initial
+begin
+	speed_increment[10] = 1'b0;
+end 
+// speed_increment[ 9 ]
+initial
+begin
+	speed_increment[9] = 1'b0;
+end 
+// speed_increment[ 8 ]
+initial
+begin
+	speed_increment[8] = 1'b0;
+end 
+// speed_increment[ 7 ]
+initial
+begin
+	speed_increment[7] = 1'b0;
+end 
+// speed_increment[ 6 ]
+initial
+begin
+	speed_increment[6] = 1'b0;
+end 
+// speed_increment[ 5 ]
+initial
+begin
+	speed_increment[5] = 1'b0;
+end 
+// speed_increment[ 4 ]
+initial
+begin
+	speed_increment[4] = 1'b0;
+end 
+// speed_increment[ 3 ]
+initial
+begin
+	speed_increment[3] = 1'b0;
+end 
+// speed_increment[ 2 ]
+initial
+begin
+	speed_increment[2] = 1'b0;
+end 
+// speed_increment[ 1 ]
+initial
+begin
+	speed_increment[1] = 1'b1;
+end 
+// speed_increment[ 0 ]
+initial
+begin
+	speed_increment[0] = 1'b0;
+end 
+// upper_limit[ 31 ]
+initial
+begin
+	upper_limit[31] = 1'b0;
+end 
+// upper_limit[ 30 ]
+initial
+begin
+	upper_limit[30] = 1'b0;
+end 
+// upper_limit[ 29 ]
+initial
+begin
+	upper_limit[29] = 1'b0;
+end 
+// upper_limit[ 28 ]
+initial
+begin
+	upper_limit[28] = 1'b0;
+end 
+// upper_limit[ 27 ]
+initial
+begin
+	upper_limit[27] = 1'b0;
+end 
+// upper_limit[ 26 ]
+initial
+begin
+	upper_limit[26] = 1'b0;
+end 
+// upper_limit[ 25 ]
+initial
+begin
+	upper_limit[25] = 1'b0;
+end 
+// upper_limit[ 24 ]
+initial
+begin
+	upper_limit[24] = 1'b0;
+end 
+// upper_limit[ 23 ]
+initial
+begin
+	upper_limit[23] = 1'b0;
+end 
+// upper_limit[ 22 ]
+initial
+begin
+	upper_limit[22] = 1'b0;
+end 
+// upper_limit[ 21 ]
+initial
+begin
+	upper_limit[21] = 1'b0;
+end 
+// upper_limit[ 20 ]
+initial
+begin
+	upper_limit[20] = 1'b0;
+end 
+// upper_limit[ 19 ]
+initial
+begin
+	upper_limit[19] = 1'b0;
+end 
+// upper_limit[ 18 ]
+initial
+begin
+	upper_limit[18] = 1'b1;
+end 
+// upper_limit[ 17 ]
+initial
+begin
+	upper_limit[17] = 1'b0;
+end 
+// upper_limit[ 16 ]
+initial
+begin
+	upper_limit[16] = 1'b0;
+end 
+// upper_limit[ 15 ]
+initial
+begin
+	upper_limit[15] = 1'b1;
+end 
+// upper_limit[ 14 ]
+initial
+begin
+	upper_limit[14] = 1'b0;
+end 
+// upper_limit[ 13 ]
+initial
+begin
+	upper_limit[13] = 1'b0;
+end 
+// upper_limit[ 12 ]
+initial
+begin
+	upper_limit[12] = 1'b1;
+end 
+// upper_limit[ 11 ]
+initial
+begin
+	upper_limit[11] = 1'b0;
+end 
+// upper_limit[ 10 ]
+initial
+begin
+	upper_limit[10] = 1'b0;
+end 
+// upper_limit[ 9 ]
+initial
+begin
+	upper_limit[9] = 1'b1;
+end 
+// upper_limit[ 8 ]
+initial
+begin
+	upper_limit[8] = 1'b1;
+end 
+// upper_limit[ 7 ]
+initial
+begin
+	upper_limit[7] = 1'b1;
+end 
+// upper_limit[ 6 ]
+initial
+begin
+	upper_limit[6] = 1'b1;
+end 
+// upper_limit[ 5 ]
+initial
+begin
+	upper_limit[5] = 1'b1;
+end 
+// upper_limit[ 4 ]
+initial
+begin
+	upper_limit[4] = 1'b0;
+end 
+// upper_limit[ 3 ]
+initial
+begin
+	upper_limit[3] = 1'b0;
+end 
+// upper_limit[ 2 ]
+initial
+begin
+	upper_limit[2] = 1'b0;
+end 
+// upper_limit[ 1 ]
+initial
+begin
+	upper_limit[1] = 1'b0;
+end 
+// upper_limit[ 0 ]
+initial
+begin
+	upper_limit[0] = 1'b0;
+end 
+// max_speed_count[ 31 ]
+initial
+begin
+	max_speed_count[31] = 1'b0;
+end 
+// max_speed_count[ 30 ]
+initial
+begin
+	max_speed_count[30] = 1'b0;
+end 
+// max_speed_count[ 29 ]
+initial
+begin
+	max_speed_count[29] = 1'b0;
+end 
+// max_speed_count[ 28 ]
+initial
+begin
+	max_speed_count[28] = 1'b0;
+end 
+// max_speed_count[ 27 ]
+initial
+begin
+	max_speed_count[27] = 1'b0;
+end 
+// max_speed_count[ 26 ]
+initial
+begin
+	max_speed_count[26] = 1'b0;
+end 
+// max_speed_count[ 25 ]
+initial
+begin
+	max_speed_count[25] = 1'b0;
+end 
+// max_speed_count[ 24 ]
+initial
+begin
+	max_speed_count[24] = 1'b0;
+end 
+// max_speed_count[ 23 ]
+initial
+begin
+	max_speed_count[23] = 1'b0;
+end 
+// max_speed_count[ 22 ]
+initial
+begin
+	max_speed_count[22] = 1'b0;
+end 
+// max_speed_count[ 21 ]
+initial
+begin
+	max_speed_count[21] = 1'b0;
+end 
+// max_speed_count[ 20 ]
+initial
+begin
+	max_speed_count[20] = 1'b0;
+end 
+// max_speed_count[ 19 ]
+initial
+begin
+	max_speed_count[19] = 1'b0;
+end 
+// max_speed_count[ 18 ]
+initial
+begin
+	max_speed_count[18] = 1'b0;
+end 
+// max_speed_count[ 17 ]
+initial
+begin
+	max_speed_count[17] = 1'b0;
+end 
+// max_speed_count[ 16 ]
+initial
+begin
+	max_speed_count[16] = 1'b0;
+end 
+// max_speed_count[ 15 ]
+initial
+begin
+	max_speed_count[15] = 1'b0;
+end 
+// max_speed_count[ 14 ]
+initial
+begin
+	max_speed_count[14] = 1'b0;
+end 
+// max_speed_count[ 13 ]
+initial
+begin
+	max_speed_count[13] = 1'b0;
+end 
+// max_speed_count[ 12 ]
+initial
+begin
+	max_speed_count[12] = 1'b0;
+end 
+// max_speed_count[ 11 ]
+initial
+begin
+	max_speed_count[11] = 1'b0;
+end 
+// max_speed_count[ 10 ]
+initial
+begin
+	max_speed_count[10] = 1'b0;
+end 
+// max_speed_count[ 9 ]
+initial
+begin
+	max_speed_count[9] = 1'b0;
+end 
+// max_speed_count[ 8 ]
+initial
+begin
+	max_speed_count[8] = 1'b0;
+end 
+// max_speed_count[ 7 ]
+initial
+begin
+	max_speed_count[7] = 1'b0;
+end 
+// max_speed_count[ 6 ]
+initial
+begin
+	max_speed_count[6] = 1'b0;
+end 
+// max_speed_count[ 5 ]
+initial
+begin
+	max_speed_count[5] = 1'b0;
+end 
+// max_speed_count[ 4 ]
+initial
+begin
+	max_speed_count[4] = 1'b0;
+end 
+// max_speed_count[ 3 ]
+initial
+begin
+	max_speed_count[3] = 1'b0;
+end 
+// max_speed_count[ 2 ]
+initial
+begin
+	max_speed_count[2] = 1'b1;
+end 
+// max_speed_count[ 1 ]
+initial
+begin
+	max_speed_count[1] = 1'b0;
+end 
+// max_speed_count[ 0 ]
+initial
+begin
+	max_speed_count[0] = 1'b1;
+end 
+endmodule
+
