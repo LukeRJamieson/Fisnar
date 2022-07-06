@@ -48,6 +48,18 @@ int main()
 		close( filedes );
 		return( 1 );
 	}
+
+    if( munmap( led, PIO_SIZE ) != 0 ) {
+		printf( "ERROR: munmap() failed...\n" );
+		close( filedes );
+		return( 1 );
+	}
+
+    if( munmap( swtch, PIO_SIZE ) != 0 ) {
+		printf( "ERROR: munmap() failed...\n" );
+		close( filedes );
+		return( 1 );
+	}
     
     // Close memory
     close( filedes );
