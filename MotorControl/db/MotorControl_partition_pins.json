@@ -144,7 +144,275 @@
 					"strict" : false
 				},
 				{
-					"name" : "Enable",
+					"name" : "StatusCode[0]",
+					"strict" : false
+				},
+				{
+					"name" : "StatusCode[1]",
+					"strict" : false
+				},
+				{
+					"name" : "StatusCode[2]",
+					"strict" : false
+				},
+				{
+					"name" : "StatusCode[3]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[0]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[1]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[2]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[3]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[4]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[5]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[6]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[7]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[8]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[9]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[10]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[11]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[12]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[13]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[14]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[15]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[16]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[17]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[18]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[19]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[20]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[21]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[22]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[23]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[24]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[25]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[26]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[27]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[28]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[29]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[30]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_count[31]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[0]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[1]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[2]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[3]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[4]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[5]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[6]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[7]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[8]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[9]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[10]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[11]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[12]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[13]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[14]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[15]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[16]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[17]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[18]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[19]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[20]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[21]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[22]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[23]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[24]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[25]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[26]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[27]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[28]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[29]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[30]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_current_freq[31]",
 					"strict" : false
 				},
 				{
@@ -152,7 +420,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "CW_polarity",
+					"name" : "CR[2]",
 					"strict" : false
 				},
 				{
@@ -160,11 +428,39 @@
 					"strict" : false
 				},
 				{
-					"name" : "Target[17]",
+					"name" : "Target[30]",
 					"strict" : false
 				},
 				{
-					"name" : "Target[18]",
+					"name" : "Target[29]",
+					"strict" : false
+				},
+				{
+					"name" : "Target[28]",
+					"strict" : false
+				},
+				{
+					"name" : "Target[27]",
+					"strict" : false
+				},
+				{
+					"name" : "Target[26]",
+					"strict" : false
+				},
+				{
+					"name" : "Target[25]",
+					"strict" : false
+				},
+				{
+					"name" : "Target[24]",
+					"strict" : false
+				},
+				{
+					"name" : "Target[23]",
+					"strict" : false
+				},
+				{
+					"name" : "Target[22]",
 					"strict" : false
 				},
 				{
@@ -180,11 +476,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "Target[15]",
+					"name" : "Target[18]",
+					"strict" : false
+				},
+				{
+					"name" : "Target[17]",
 					"strict" : false
 				},
 				{
 					"name" : "Target[16]",
+					"strict" : false
+				},
+				{
+					"name" : "Target[15]",
 					"strict" : false
 				},
 				{
@@ -200,6 +504,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "Target[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Target[10]",
+					"strict" : false
+				},
+				{
 					"name" : "Target[9]",
 					"strict" : false
 				},
@@ -208,19 +520,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "Target[5]",
-					"strict" : false
-				},
-				{
-					"name" : "Target[4]",
-					"strict" : false
-				},
-				{
 					"name" : "Target[7]",
 					"strict" : false
 				},
 				{
 					"name" : "Target[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Target[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Target[4]",
 					"strict" : false
 				},
 				{
@@ -240,447 +552,611 @@
 					"strict" : false
 				},
 				{
-					"name" : "Target[11]",
+					"name" : "CR[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Target[10]",
+					"name" : "upper_limit[31]",
 					"strict" : false
 				},
 				{
-					"name" : "Target[25]",
+					"name" : "upper_limit[30]",
 					"strict" : false
 				},
 				{
-					"name" : "Target[28]",
+					"name" : "upper_limit[29]",
 					"strict" : false
 				},
 				{
-					"name" : "Target[27]",
+					"name" : "upper_limit[28]",
 					"strict" : false
 				},
 				{
-					"name" : "Target[26]",
+					"name" : "upper_limit[27]",
 					"strict" : false
 				},
 				{
-					"name" : "Target[24]",
+					"name" : "upper_limit[26]",
 					"strict" : false
 				},
 				{
-					"name" : "Target[23]",
+					"name" : "upper_limit[25]",
 					"strict" : false
 				},
 				{
-					"name" : "Target[22]",
+					"name" : "upper_limit[24]",
 					"strict" : false
 				},
 				{
-					"name" : "Target[30]",
+					"name" : "upper_limit[23]",
 					"strict" : false
 				},
 				{
-					"name" : "Target[29]",
+					"name" : "upper_limit[22]",
 					"strict" : false
 				},
 				{
-					"name" : "Home",
+					"name" : "upper_limit[21]",
 					"strict" : false
 				},
 				{
-					"name" : "LS",
+					"name" : "upper_limit[20]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[0]",
+					"name" : "upper_limit[19]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[1]",
+					"name" : "upper_limit[18]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[2]",
+					"name" : "upper_limit[17]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[3]",
+					"name" : "upper_limit[16]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[4]",
+					"name" : "upper_limit[15]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[5]",
+					"name" : "upper_limit[14]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[6]",
+					"name" : "upper_limit[13]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[7]",
+					"name" : "upper_limit[12]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[8]",
+					"name" : "upper_limit[11]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[9]",
+					"name" : "upper_limit[10]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[10]",
+					"name" : "upper_limit[9]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[11]",
+					"name" : "upper_limit[8]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[12]",
+					"name" : "upper_limit[7]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[13]",
+					"name" : "upper_limit[6]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[14]",
+					"name" : "upper_limit[5]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[15]",
+					"name" : "upper_limit[4]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[16]",
+					"name" : "upper_limit[3]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[17]",
+					"name" : "upper_limit[2]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[18]",
+					"name" : "upper_limit[1]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[19]",
+					"name" : "upper_limit[0]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[20]",
+					"name" : "lower_limit[31]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[21]",
+					"name" : "lower_limit[30]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[22]",
+					"name" : "lower_limit[29]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[23]",
+					"name" : "lower_limit[28]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[24]",
+					"name" : "lower_limit[27]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[25]",
+					"name" : "lower_limit[26]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[26]",
+					"name" : "lower_limit[25]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[27]",
+					"name" : "lower_limit[24]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[28]",
+					"name" : "lower_limit[23]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[29]",
+					"name" : "lower_limit[22]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[30]",
+					"name" : "lower_limit[21]",
 					"strict" : false
 				},
 				{
-					"name" : "home_location[31]",
+					"name" : "lower_limit[20]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[14]",
+					"name" : "lower_limit[19]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[14]",
+					"name" : "lower_limit[18]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[4]",
+					"name" : "lower_limit[17]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[7]",
+					"name" : "lower_limit[16]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[6]",
+					"name" : "lower_limit[15]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[5]",
+					"name" : "lower_limit[14]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[1]",
+					"name" : "lower_limit[13]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[0]",
+					"name" : "lower_limit[12]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[3]",
+					"name" : "lower_limit[11]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[2]",
+					"name" : "lower_limit[10]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[9]",
+					"name" : "lower_limit[9]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[11]",
+					"name" : "lower_limit[8]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[10]",
+					"name" : "lower_limit[7]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[8]",
+					"name" : "lower_limit[6]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[13]",
+					"name" : "lower_limit[5]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[12]",
+					"name" : "lower_limit[4]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[18]",
+					"name" : "lower_limit[3]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[21]",
+					"name" : "lower_limit[2]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[20]",
+					"name" : "lower_limit[1]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[19]",
+					"name" : "lower_limit[0]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[17]",
+					"name" : "min_speed_freq[31]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[16]",
+					"name" : "min_speed_freq[30]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[15]",
+					"name" : "min_speed_freq[29]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[25]",
+					"name" : "min_speed_freq[28]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[28]",
+					"name" : "min_speed_freq[27]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[27]",
+					"name" : "min_speed_freq[26]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[26]",
+					"name" : "min_speed_freq[25]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[24]",
+					"name" : "min_speed_freq[24]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[23]",
+					"name" : "min_speed_freq[23]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[22]",
+					"name" : "min_speed_freq[22]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[30]",
+					"name" : "min_speed_freq[21]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[31]",
+					"name" : "min_speed_freq[20]",
 					"strict" : false
 				},
 				{
-					"name" : "min_speed_count[29]",
+					"name" : "min_speed_freq[19]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[7]",
+					"name" : "min_speed_freq[18]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[6]",
+					"name" : "min_speed_freq[17]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[5]",
+					"name" : "min_speed_freq[16]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[4]",
+					"name" : "min_speed_freq[15]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[1]",
+					"name" : "min_speed_freq[14]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[0]",
+					"name" : "min_speed_freq[13]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[3]",
+					"name" : "min_speed_freq[12]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[2]",
+					"name" : "min_speed_freq[11]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[9]",
+					"name" : "min_speed_freq[10]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[11]",
+					"name" : "min_speed_freq[9]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[10]",
+					"name" : "min_speed_freq[8]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[8]",
+					"name" : "min_speed_freq[7]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[13]",
+					"name" : "min_speed_freq[6]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[12]",
+					"name" : "min_speed_freq[5]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[16]",
+					"name" : "min_speed_freq[4]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[18]",
+					"name" : "min_speed_freq[3]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[17]",
+					"name" : "min_speed_freq[2]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[15]",
+					"name" : "min_speed_freq[1]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[21]",
+					"name" : "min_speed_freq[0]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[20]",
+					"name" : "AWOff",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[19]",
+					"name" : "rst",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[23]",
+					"name" : "CR[31]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[25]",
+					"name" : "clk_freq_div_2[31]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[24]",
+					"name" : "max_speed_freq[31]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[22]",
+					"name" : "max_speed_freq[28]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[28]",
+					"name" : "max_speed_freq[27]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[27]",
+					"name" : "max_speed_freq[26]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[26]",
+					"name" : "max_speed_freq[25]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[30]",
+					"name" : "max_speed_freq[24]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[31]",
+					"name" : "max_speed_freq[23]",
 					"strict" : false
 				},
 				{
-					"name" : "max_speed_count[29]",
+					"name" : "max_speed_freq[22]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[14]",
+					"name" : "max_speed_freq[21]",
 					"strict" : false
 				},
 				{
-					"name" : "accel_steps[11]",
+					"name" : "max_speed_freq[20]",
+					"strict" : false
+				},
+				{
+					"name" : "max_speed_freq[19]",
+					"strict" : false
+				},
+				{
+					"name" : "max_speed_freq[18]",
+					"strict" : false
+				},
+				{
+					"name" : "max_speed_freq[17]",
+					"strict" : false
+				},
+				{
+					"name" : "max_speed_freq[16]",
+					"strict" : false
+				},
+				{
+					"name" : "max_speed_freq[15]",
+					"strict" : false
+				},
+				{
+					"name" : "max_speed_freq[14]",
+					"strict" : false
+				},
+				{
+					"name" : "max_speed_freq[13]",
+					"strict" : false
+				},
+				{
+					"name" : "max_speed_freq[12]",
+					"strict" : false
+				},
+				{
+					"name" : "max_speed_freq[11]",
+					"strict" : false
+				},
+				{
+					"name" : "max_speed_freq[10]",
+					"strict" : false
+				},
+				{
+					"name" : "max_speed_freq[9]",
+					"strict" : false
+				},
+				{
+					"name" : "max_speed_freq[8]",
+					"strict" : false
+				},
+				{
+					"name" : "max_speed_freq[7]",
+					"strict" : false
+				},
+				{
+					"name" : "max_speed_freq[6]",
+					"strict" : false
+				},
+				{
+					"name" : "max_speed_freq[5]",
+					"strict" : false
+				},
+				{
+					"name" : "max_speed_freq[4]",
+					"strict" : false
+				},
+				{
+					"name" : "max_speed_freq[3]",
+					"strict" : false
+				},
+				{
+					"name" : "max_speed_freq[2]",
+					"strict" : false
+				},
+				{
+					"name" : "max_speed_freq[1]",
+					"strict" : false
+				},
+				{
+					"name" : "max_speed_freq[0]",
+					"strict" : false
+				},
+				{
+					"name" : "max_speed_freq[30]",
+					"strict" : false
+				},
+				{
+					"name" : "max_speed_freq[29]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_freq_div_2[30]",
+					"strict" : false
+				},
+				{
+					"name" : "freq_increment[31]",
+					"strict" : false
+				},
+				{
+					"name" : "accel_steps[31]",
+					"strict" : false
+				},
+				{
+					"name" : "accel_steps[30]",
+					"strict" : false
+				},
+				{
+					"name" : "accel_steps[29]",
+					"strict" : false
+				},
+				{
+					"name" : "accel_steps[28]",
+					"strict" : false
+				},
+				{
+					"name" : "accel_steps[27]",
+					"strict" : false
+				},
+				{
+					"name" : "accel_steps[26]",
+					"strict" : false
+				},
+				{
+					"name" : "accel_steps[25]",
+					"strict" : false
+				},
+				{
+					"name" : "accel_steps[24]",
+					"strict" : false
+				},
+				{
+					"name" : "accel_steps[23]",
+					"strict" : false
+				},
+				{
+					"name" : "accel_steps[22]",
+					"strict" : false
+				},
+				{
+					"name" : "accel_steps[21]",
+					"strict" : false
+				},
+				{
+					"name" : "accel_steps[20]",
+					"strict" : false
+				},
+				{
+					"name" : "accel_steps[19]",
+					"strict" : false
+				},
+				{
+					"name" : "accel_steps[18]",
+					"strict" : false
+				},
+				{
+					"name" : "accel_steps[17]",
+					"strict" : false
+				},
+				{
+					"name" : "accel_steps[16]",
+					"strict" : false
+				},
+				{
+					"name" : "accel_steps[15]",
 					"strict" : false
 				},
 				{
@@ -696,6 +1172,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "accel_steps[11]",
+					"strict" : false
+				},
+				{
 					"name" : "accel_steps[10]",
 					"strict" : false
 				},
@@ -705,6 +1185,18 @@
 				},
 				{
 					"name" : "accel_steps[8]",
+					"strict" : false
+				},
+				{
+					"name" : "accel_steps[7]",
+					"strict" : false
+				},
+				{
+					"name" : "accel_steps[6]",
+					"strict" : false
+				},
+				{
+					"name" : "accel_steps[5]",
 					"strict" : false
 				},
 				{
@@ -728,207 +1220,247 @@
 					"strict" : false
 				},
 				{
-					"name" : "accel_steps[7]",
+					"name" : "freq_increment[30]",
 					"strict" : false
 				},
 				{
-					"name" : "accel_steps[6]",
+					"name" : "freq_increment[29]",
 					"strict" : false
 				},
 				{
-					"name" : "accel_steps[5]",
+					"name" : "freq_increment[28]",
 					"strict" : false
 				},
 				{
-					"name" : "accel_steps[21]",
+					"name" : "freq_increment[27]",
 					"strict" : false
 				},
 				{
-					"name" : "accel_steps[20]",
+					"name" : "freq_increment[26]",
 					"strict" : false
 				},
 				{
-					"name" : "accel_steps[19]",
+					"name" : "freq_increment[25]",
 					"strict" : false
 				},
 				{
-					"name" : "accel_steps[18]",
+					"name" : "freq_increment[24]",
 					"strict" : false
 				},
 				{
-					"name" : "accel_steps[16]",
+					"name" : "freq_increment[23]",
 					"strict" : false
 				},
 				{
-					"name" : "accel_steps[17]",
+					"name" : "freq_increment[22]",
 					"strict" : false
 				},
 				{
-					"name" : "accel_steps[15]",
+					"name" : "freq_increment[21]",
 					"strict" : false
 				},
 				{
-					"name" : "accel_steps[28]",
+					"name" : "freq_increment[20]",
 					"strict" : false
 				},
 				{
-					"name" : "accel_steps[27]",
+					"name" : "freq_increment[19]",
 					"strict" : false
 				},
 				{
-					"name" : "accel_steps[26]",
+					"name" : "freq_increment[18]",
 					"strict" : false
 				},
 				{
-					"name" : "accel_steps[25]",
+					"name" : "freq_increment[17]",
 					"strict" : false
 				},
 				{
-					"name" : "accel_steps[23]",
+					"name" : "freq_increment[16]",
 					"strict" : false
 				},
 				{
-					"name" : "accel_steps[24]",
+					"name" : "freq_increment[15]",
 					"strict" : false
 				},
 				{
-					"name" : "accel_steps[22]",
+					"name" : "freq_increment[14]",
 					"strict" : false
 				},
 				{
-					"name" : "accel_steps[31]",
+					"name" : "freq_increment[13]",
 					"strict" : false
 				},
 				{
-					"name" : "accel_steps[30]",
+					"name" : "freq_increment[12]",
 					"strict" : false
 				},
 				{
-					"name" : "accel_steps[29]",
+					"name" : "freq_increment[11]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[13]",
+					"name" : "freq_increment[10]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[12]",
+					"name" : "freq_increment[9]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[11]",
+					"name" : "freq_increment[8]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[9]",
+					"name" : "freq_increment[7]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[10]",
+					"name" : "freq_increment[6]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[8]",
+					"name" : "freq_increment[5]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[4]",
+					"name" : "freq_increment[4]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[3]",
+					"name" : "freq_increment[3]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[2]",
+					"name" : "freq_increment[2]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[1]",
+					"name" : "freq_increment[1]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[0]",
+					"name" : "freq_increment[0]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[7]",
+					"name" : "clk_freq_div_2[29]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[6]",
+					"name" : "clk_freq_div_2[28]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[5]",
+					"name" : "clk_freq_div_2[27]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[18]",
+					"name" : "clk_freq_div_2[26]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[17]",
+					"name" : "clk_freq_div_2[25]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[16]",
+					"name" : "clk_freq_div_2[24]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[15]",
+					"name" : "clk_freq_div_2[23]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[21]",
+					"name" : "clk_freq_div_2[22]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[20]",
+					"name" : "clk_freq_div_2[21]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[19]",
+					"name" : "clk_freq_div_2[20]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[28]",
+					"name" : "clk_freq_div_2[19]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[27]",
+					"name" : "clk_freq_div_2[18]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[26]",
+					"name" : "clk_freq_div_2[17]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[25]",
+					"name" : "clk_freq_div_2[16]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[24]",
+					"name" : "clk_freq_div_2[15]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[22]",
+					"name" : "clk_freq_div_2[14]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[23]",
+					"name" : "clk_freq_div_2[13]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[30]",
+					"name" : "clk_freq_div_2[12]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[31]",
+					"name" : "clk_freq_div_2[11]",
 					"strict" : false
 				},
 				{
-					"name" : "speed_increment[29]",
+					"name" : "clk_freq_div_2[10]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_freq_div_2[9]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_freq_div_2[8]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_freq_div_2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_freq_div_2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_freq_div_2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_freq_div_2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_freq_div_2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_freq_div_2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_freq_div_2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_freq_div_2[0]",
 					"strict" : false
 				}
 			]

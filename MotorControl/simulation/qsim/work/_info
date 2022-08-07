@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/simulation/qsim
 vMotorControl
-Z1 !s110 1657105147
+Z1 !s110 1659515755
 !i10b 1
-!s100 l^d]7I9C2_AEcYjj4bEd<0
-IlNh8jBdY;[6hZk>U>50;^3
+!s100 15329>On_7WAl>9jX`EV]1
+I7XM?<0Ci2W:MW9YUbm:;i3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1657105146
+w1659515754
 8MotorControl.vo
 FMotorControl.vo
 L0 31
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1657105147.000000
+Z4 !s108 1659515755.000000
 !s107 MotorControl.vo|
 !s90 -work|work|MotorControl.vo|
 !i113 1
@@ -33,11 +33,11 @@ n@motor@control
 vMotorControl_vlg_vec_tst
 R1
 !i10b 1
-!s100 lkN6deLJJMQ9[Cg:=l[z90
-I[zgZ0`?z@;Cg1IDWL4F<W3
+!s100 T[W[R@0DNWXi2LVz5DnUV2
+If:oM:Z=@d5iW3>O9=;g_L1
 R2
 R0
-w1657105145
+w1659515753
 8Waveform.vwf.vt
 FWaveform.vwf.vt
 L0 29

@@ -1,23 +1,23 @@
 module MotorControl
 (
 input clk,
-input rst,
+input rst, /////////////////////////////////// include a software reset
 // Software Control Signals
-input Enable,
-input Home,
+input [31:0] CR,
 input [31:0] Target,
 // Hardware Physical Signals
 input LS,
 input AWOff,
 
 // Acceleration Parameters
-input [31:0] max_speed_count, // This is the counter value for running at maximum speed. eg max speed is 50000 (50mm/s). Using the 50MHz clock this will be (50,000,000/2)/2000 = 500
-input [31:0] min_speed_count, // This is the counter value for running at minimum speed. eg min speed is 2000 (2mm/s). Using the 50MHz clock this will be (50,000,000/2)/2000 = 12500
+input [31:0] max_speed_freq, // This is the counter value for running at maximum speed. eg max speed is 50000 (50mm/s). Using the 50MHz clock this will be (50,000,000/2)/2000 = 500
+input [31:0] min_speed_freq, // This is the counter value for running at minimum speed. eg min speed is 2000 (2mm/s). Using the 50MHz clock this will be (50,000,000/2)/2000 = 12500
 input [31:0] accel_steps, // This is how many steps the motors should travel between the min and max speed. For this example we let it go from 2mm/s to 50mm/s in 10mm (10000 steps) . 
-input [31:0] speed_increment, // (maxspeed-minspeed)/accel_steps (let the HPS work this out)
+input [31:0] freq_increment, // (maxspeed-minspeed)/accel_steps (let the HPS work this out)
+input [31:0] homing_speed_freq, // Speed at which homing is performed
+input [31:0] clk_freq_div_2,
 
 // Movement and Range Parameters
-input CW_polarity, // 0: CW = +1, 1: CW = -1 (X and Z = 0; Y = 1)
 input [31:0] home_location, // after homing / at limit switch, what is the location
 input [31:0] lower_limit,
 input [31:0] upper_limit,
@@ -26,55 +26,103 @@ input [31:0] upper_limit,
 output CW,
 output CCW,
 output reg [31:0] Location,
-output reg Done //flag
+output reg Done, //flag
+output reg [3:0] StatusCode,
 
+output [31:0] debug_current_count,
+output [31:0] debug_current_freq
 );
+assign debug_current_count = current_count;
+assign debug_current_freq = current_freq;
+
+wire SoftReset = CR[31];
+wire Home = CR[0];
+wire Enable = CR[1];
+wire CW_polarity = CR[2];  // 0: CW = +1, 1: CW = -1 (X and Z = 0; Y = 1)
 
 // Acceleration Control (Dynamic Clock)
 reg Step;
 reg [31:0] counter;
-reg [31:0] speed_count;
+reg [31:0] current_count;
+reg [31:0] current_freq;
 reg DIR_CW;
 reg DIR_CCW;
+reg Overlimit;
 
-initial
+parameter isReset = 4'b0000;
+parameter isHoming1 = 4'b0100;
+parameter isHoming2 = 4'b0010;
+parameter isHomed = 4'b0110;
+parameter targetUpper = 4'b1000;
+parameter targetLower = 4'b0001;
+parameter countingUp = 4'b1100;
+parameter countingDown = 4'b0011;
+parameter LocationAtTarget = 4'b1111;
+parameter other = 4'b1010;
+
+initial // for debug
 begin
-	speed_count = min_speed_count;
+//	current_count = clk_freq_div_2/min_speed_freq;
+	Overlimit = 0;
 end
- 
+
 
 always@(posedge clk) //TODO
 begin
-	counter = counter + 32'b1;
-	if (Enable && (counter >= speed_count))
+	counter <= counter + 32'b1;
+	if ((counter >= current_count)) //Enable && 
 	begin
 		counter <= 0;
 		Step <= ~Step;
 	end
 end
 
-always@(posedge Step)
+always@(posedge Step or negedge rst or posedge AWOff or posedge SoftReset)
 begin
-	if(Home && !LS)
-		begin
+
+	if(~rst || AWOff || SoftReset)
+	begin
 			Location <= 0;
 			DIR_CW <= 0;
-			DIR_CCW <= 1;
-			Done <= 0;
-			speed_count <= min_speed_count;
-		end
-
-	else if(Home && LS)
-		begin
-			Location <= home_location;
-			DIR_CW <= 0;
 			DIR_CCW <= 0;
-			Done <= 1;
-			speed_count <= min_speed_count;
+			Done <= 0;
+			Overlimit <= 0;
+			current_freq <= min_speed_freq;
+			StatusCode <= isReset;
+	end
+	
+//////////////////////// TO DO HOMING SEQUENCE ////////////////////
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+
+		
+///////////////// Limit Check ////////////////////////////////////
+	else if(Target > upper_limit)
+		begin
+			StatusCode <= targetUpper;
+			Overlimit <= 1;
+		end
+	else if(Target < lower_limit)
+		begin
+			StatusCode <= targetLower;
+			Overlimit <= 1;
 		end
 	
-///////////////// Counting up to target///////////////////////////
-	else if(Enable && (Location < Target))
+///////////////// At the Target //////////////////////////////////	
+	else if(Enable && (Location == Target))
+	begin
+		Location <= Location;
+		DIR_CW <= 0;
+		DIR_CCW <= 0;
+		Done <= 1;
+		current_freq <= min_speed_freq;
+		StatusCode <= LocationAtTarget;
+	end
+	
+	
+///////////////// Counting up to target//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	else if(!Overlimit && Enable && (Location < Target))
 	begin
 		Location <= Location + 32'b1;
 		if(CW_polarity)
@@ -90,30 +138,44 @@ begin
 		Done <= 0;
 
 /////////////////////// Speed Control //////////////////////////////
-		if(((Location + accel_steps) > Target) && (speed_count < min_speed_count)) //((Location - Target) < accel_steps) && (speed_count < min_speed_count)
+		// if within step distance to target && current frequency is greater than min = SLOW DOWN
+		if(((Location + accel_steps) > Target) && (current_freq > min_speed_freq)) //((Location - Target) < accel_steps) && (speed_count < min_speed_freq)
 		begin
-			speed_count <= speed_count + speed_increment;
+			if((current_freq - freq_increment) < min_speed_freq) // make sure it doesn't go below 0
+				current_freq <= min_speed_freq;
+			else
+				current_freq <= current_freq - freq_increment;
 		end
-		else if((Location + accel_steps) > Target  && speed_count >= min_speed_count) //(Location - Target) < accel_steps
+		// if within step distance to target && current freq is less than min = set freq to min
+		else if((Location + accel_steps) > Target  && current_freq <= min_speed_freq) //(Location - Target) < accel_steps
 		begin
-			speed_count <= min_speed_count;
+			current_freq <= min_speed_freq;
 		end
-		else if(speed_count <= max_speed_count)
+		// if current freq is great than max = limit freq to max
+		else if(current_freq >= max_speed_freq)
 		begin
-			speed_count <= max_speed_count;
+			current_freq <= max_speed_freq;
 		end
-		else if(speed_count > max_speed_count)
+		// if its not within slow down distance, SPEED UP
+		else if(current_freq < max_speed_freq)
 		begin
-			speed_count <= speed_count - speed_increment;
+			current_freq <= current_freq + freq_increment;
 		end
+		// run at min freq
 		else
 		begin
-			speed_count <= min_speed_count;
+			current_freq <= min_speed_freq;
 		end
-///////////////////////////////////////////////////////////////////			
+		
+		if(current_freq < min_speed_freq)
+			current_freq <= min_speed_freq;
+		
+		// Update StatusCode	
+		StatusCode <= countingUp;
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////			
 	end
 ///////////////// Counting down to target///////////////////////////
-	else if(Enable && (Location > Target))
+	else if(!Overlimit && Enable && (Location > Target))
 	begin
 		Location <= Location - 32'b1;
 		if(CW_polarity)
@@ -129,50 +191,56 @@ begin
 		Done <= 0;
 
 /////////////////////// Speed Control //////////////////////////////
-		if(((Target + accel_steps) > Location) && (speed_count < min_speed_count))
+		
+		if(((Target + accel_steps) > Location) && (current_freq > min_speed_freq)) // SLOW DOWN
 		begin
-			speed_count <= speed_count + speed_increment; // Slow Down
+			if((current_freq - freq_increment) < min_speed_freq) // make sure it doesn't go below 0
+				current_freq <= min_speed_freq;
+			else
+				current_freq <= current_freq - freq_increment;
 		end
-		else if((Target + accel_steps) > Location && speed_count >= min_speed_count)
+		else if((Target + accel_steps) > Location && current_freq <= min_speed_freq) // STAY AT MIN
 		begin
-			speed_count <= min_speed_count;
+			current_freq <= min_speed_freq;
 		end
-		else if(speed_count <= max_speed_count)
+		else if(current_freq >= max_speed_freq)
 		begin
-			speed_count <= max_speed_count;			// Maintain Speed
+			current_freq <= max_speed_freq;			// Maintain Speed
 		end
-		else if(speed_count > max_speed_count)
+		else if(current_freq < max_speed_freq)
 		begin
-			speed_count <= speed_count - speed_increment; // Speed up
+			current_freq <= current_freq + freq_increment; // Speed up
 		end
 		else
 		begin
-			speed_count <= min_speed_count;				// Run at Min
+			current_freq <= min_speed_freq;				// Run at Min
 		end
+		
+		if(current_freq < min_speed_freq)
+			current_freq <= min_speed_freq;
+		
+		StatusCode <= countingDown;
 ///////////////////////////////////////////////////////////////////	
 	end
 
-	else if(Enable && (Location == Target))
-	begin
-		Location <= Location;
-		DIR_CW <= 0;
-		DIR_CCW <= 0;
-		Done <= 1;
-		speed_count <= min_speed_count;
-	end
-
-	else
+	else // Unexpected Condition or not Homed
 	begin
 		Location <= Location;
 		DIR_CW <= 0;
 		DIR_CCW <= 0;
 		Done <= 0;
-		speed_count <= min_speed_count;
+		Overlimit <= 0;
+		current_freq <= min_speed_freq;
+		StatusCode <= other;
 	end
+	
+	current_count <= (clk_freq_div_2/current_freq);
+	
 end
 
 assign CW = Step & DIR_CW;
 assign CCW = Step & DIR_CCW;
+
 
 
 endmodule

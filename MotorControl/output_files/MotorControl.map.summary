@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Wed Jul 06 20:42:03 2022
+Analysis & Synthesis Status : Successful - Wed Aug 03 18:39:08 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : MotorControl
 Top-level Entity Name : MotorControl
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 100
-Total pins : 298
+Total registers : 105
+Total pins : 459
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

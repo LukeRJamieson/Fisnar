@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MotorControl
-Wed Jul 06 20:42:03 2022
+Wed Aug 03 18:39:08 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -15,10 +15,11 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
- 13. Analysis & Synthesis Suppressed Messages
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |MotorControl
+ 11. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -44,14 +45,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Jul 06 20:42:03 2022       ;
+; Analysis & Synthesis Status     ; Successful - Wed Aug 03 18:39:08 2022       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; MotorControl                                ;
 ; Top-level Entity Name           ; MotorControl                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 100                                         ;
-; Total pins                      ; 298                                         ;
+; Total registers                 ; 105                                         ;
+; Total pins                      ; 459                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -159,59 +160,76 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 24          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 1.01        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-16        ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
+;     Processor 5            ;   0.1%      ;
+;     Processor 6            ;   0.1%      ;
+;     Processor 7            ;   0.1%      ;
+;     Processor 8            ;   0.1%      ;
+;     Processors 9-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                     ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                       ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------------------+---------+
-; MotorControl.v                   ; yes             ; User Verilog HDL File  ; C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                       ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                   ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------+---------+
+; MotorControl.v                   ; yes             ; User Verilog HDL File        ; C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v             ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_divide.tdf                                          ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/abs_divider.inc                                         ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                     ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                          ;         ;
+; db/lpm_divide_3dm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/db/lpm_divide_3dm.tdf      ;         ;
+; db/sign_div_unsign_9nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/db/sign_div_unsign_9nh.tdf ;         ;
+; db/alt_u_div_o2f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/db/alt_u_div_o2f.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimate of Logic utilization (ALMs needed) ; 321   ;
-;                                             ;       ;
-; Combinational ALUT usage for logic          ; 477   ;
-;     -- 7 input functions                    ; 1     ;
-;     -- 6 input functions                    ; 164   ;
-;     -- 5 input functions                    ; 49    ;
-;     -- 4 input functions                    ; 55    ;
-;     -- <=3 input functions                  ; 208   ;
-;                                             ;       ;
-; Dedicated logic registers                   ; 100   ;
-;                                             ;       ;
-; I/O pins                                    ; 298   ;
-;                                             ;       ;
-; Total DSP Blocks                            ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; Step  ;
-; Maximum fan-out                             ; 70    ;
-; Total fan-out                               ; 2722  ;
-; Average fan-out                             ; 2.32  ;
-+---------------------------------------------+-------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 968       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 1752      ;
+;     -- 7 input functions                    ; 2         ;
+;     -- 6 input functions                    ; 182       ;
+;     -- 5 input functions                    ; 571       ;
+;     -- 4 input functions                    ; 483       ;
+;     -- <=3 input functions                  ; 514       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 105       ;
+;                                             ;           ;
+; I/O pins                                    ; 459       ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; always1~3 ;
+; Maximum fan-out                             ; 136       ;
+; Total fan-out                               ; 8563      ;
+; Average fan-out                             ; 3.09      ;
++---------------------------------------------+-----------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                     ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name  ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
-; |MotorControl              ; 477 (477)           ; 100 (100)                 ; 0                 ; 0          ; 298  ; 0            ; |MotorControl       ; MotorControl ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                  ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                           ; Entity Name         ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |MotorControl                          ; 1752 (623)          ; 105 (105)                 ; 0                 ; 0          ; 459  ; 0            ; |MotorControl                                                                                                 ; MotorControl        ; work         ;
+;    |lpm_divide:Div0|                   ; 1129 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MotorControl|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_3dm:auto_generated|  ; 1129 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MotorControl|lpm_divide:Div0|lpm_divide_3dm:auto_generated                                                   ; lpm_divide_3dm      ; work         ;
+;          |sign_div_unsign_9nh:divider| ; 1129 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MotorControl|lpm_divide:Div0|lpm_divide_3dm:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
+;             |alt_u_div_o2f:divider|    ; 1129 (1129)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MotorControl|lpm_divide:Div0|lpm_divide_3dm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_o2f:divider ; alt_u_div_o2f       ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -220,24 +238,67 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 100   ;
-; Number of registers using Synchronous Clear  ; 64    ;
-; Number of registers using Synchronous Load   ; 32    ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Total registers                              ; 105   ;
+; Number of registers using Synchronous Clear  ; 32    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 72    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 32    ;
+; Number of registers using Clock Enable       ; 67    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |MotorControl|Location[14]~reg0 ;
-; 8:1                ; 32 bits   ; 160 LEs       ; 64 LEs               ; 96 LEs                 ; Yes        ; |MotorControl|speed_count[18]   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |MotorControl|DIR_CW             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |MotorControl|StatusCode[2]~reg0 ;
+; 7:1                ; 32 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |MotorControl|current_freq[19]   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |MotorControl ;
++------------------+-------+---------------------------------------------------+
+; Parameter Name   ; Value ; Type                                              ;
++------------------+-------+---------------------------------------------------+
+; isReset          ; 0000  ; Unsigned Binary                                   ;
+; isHoming1        ; 0100  ; Unsigned Binary                                   ;
+; isHoming2        ; 0010  ; Unsigned Binary                                   ;
+; isHomed          ; 0110  ; Unsigned Binary                                   ;
+; targetUpper      ; 1000  ; Unsigned Binary                                   ;
+; targetLower      ; 0001  ; Unsigned Binary                                   ;
+; countingUp       ; 1100  ; Unsigned Binary                                   ;
+; countingDown     ; 0011  ; Unsigned Binary                                   ;
+; LocationAtTarget ; 1111  ; Unsigned Binary                                   ;
+; other            ; 1010  ; Unsigned Binary                                   ;
++------------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                ;
+; LPM_WIDTHD             ; 32             ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_3dm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -245,30 +306,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 100                         ;
-;     ENA SCLR SLD      ; 32                          ;
+; arriav_ff             ; 105                         ;
+;     CLR               ; 5                           ;
+;     ENA CLR           ; 67                          ;
 ;     SCLR              ; 32                          ;
-;     plain             ; 36                          ;
-; arriav_lcell_comb     ; 477                         ;
-;     arith             ; 160                         ;
+;     plain             ; 1                           ;
+; arriav_lcell_comb     ; 1784                        ;
+;     arith             ; 740                         ;
+;         0 data inputs ; 58                          ;
 ;         1 data inputs ; 33                          ;
-;         2 data inputs ; 96                          ;
+;         2 data inputs ; 125                         ;
 ;         4 data inputs ; 1                           ;
-;         5 data inputs ; 30                          ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 284                         ;
-;         2 data inputs ; 43                          ;
-;         3 data inputs ; 4                           ;
-;         4 data inputs ; 54                          ;
-;         5 data inputs ; 19                          ;
-;         6 data inputs ; 164                         ;
-;     shared            ; 32                          ;
-;         2 data inputs ; 32                          ;
-; boundary_port         ; 298                         ;
+;         5 data inputs ; 523                         ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
+;     normal            ; 1001                        ;
+;         1 data inputs ; 32                          ;
+;         2 data inputs ; 149                         ;
+;         3 data inputs ; 111                         ;
+;         4 data inputs ; 479                         ;
+;         5 data inputs ; 48                          ;
+;         6 data inputs ; 182                         ;
+;     shared            ; 41                          ;
+;         0 data inputs ; 3                           ;
+;         2 data inputs ; 35                          ;
+;         4 data inputs ; 3                           ;
+; boundary_port         ; 459                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 10.80                       ;
-; Average LUT depth     ; 6.65                        ;
+; Max LUT depth         ; 95.60                       ;
+; Average LUT depth     ; 61.46                       ;
 +-----------------------+-----------------------------+
 
 
@@ -277,7 +343,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -287,99 +353,178 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Jul 06 20:41:55 2022
+    Info: Processing started: Wed Aug 03 18:38:59 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MotorControl -c MotorControl
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file motorcontrol.v
     Info (12023): Found entity 1: MotorControl File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 1
+Info (12021): Found 9 design units, including 9 entities, in source file inverse.v
+    Info (12023): Found entity 1: inverse_altfp_inv_and_or_ckd File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/inverse.v Line: 50
+    Info (12023): Found entity 2: inverse_altfp_inv_and_or_umd File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/inverse.v Line: 120
+    Info (12023): Found entity 3: inverse_altfp_inv_and_or_vid File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/inverse.v Line: 190
+    Info (12023): Found entity 4: inverse_altfp_inv_and_or_hld File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/inverse.v Line: 260
+    Info (12023): Found entity 5: inverse_altfp_inv_csa_tbi File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/inverse.v Line: 330
+    Info (12023): Found entity 6: inverse_altfp_inv_csa_47i File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/inverse.v Line: 457
+    Info (12023): Found entity 7: inverse_altfp_inv_csa_58i File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/inverse.v Line: 529
+    Info (12023): Found entity 8: inverse_altfp_inv_vec File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/inverse.v Line: 597
+    Info (12023): Found entity 9: inverse File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/inverse.v Line: 1530
 Info (12127): Elaborating entity "MotorControl" for the top level hierarchy
-Warning (10855): Verilog HDL warning at MotorControl.v(41): initial value for variable speed_count should be constant File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 41
+Warning (10036): Verilog HDL or VHDL warning at MotorControl.v(39): object "Home" assigned a value but never read File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 39
+Critical Warning (10237): Verilog HDL warning at MotorControl.v(237): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 237
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 237
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 237
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 237
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_3dm.tdf
+    Info (12023): Found entity 1: lpm_divide_3dm File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/db/lpm_divide_3dm.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_9nh File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/db/sign_div_unsign_9nh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_o2f.tdf
+    Info (12023): Found entity 1: alt_u_div_o2f File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/db/alt_u_div_o2f.tdf Line: 22
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "current_freq[31]" is converted into an equivalent circuit using register "current_freq[31]~_emulated" and latch "current_freq[31]~1" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[30]" is converted into an equivalent circuit using register "current_freq[30]~_emulated" and latch "current_freq[30]~5" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[29]" is converted into an equivalent circuit using register "current_freq[29]~_emulated" and latch "current_freq[29]~9" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[28]" is converted into an equivalent circuit using register "current_freq[28]~_emulated" and latch "current_freq[28]~13" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[27]" is converted into an equivalent circuit using register "current_freq[27]~_emulated" and latch "current_freq[27]~17" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[26]" is converted into an equivalent circuit using register "current_freq[26]~_emulated" and latch "current_freq[26]~21" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[25]" is converted into an equivalent circuit using register "current_freq[25]~_emulated" and latch "current_freq[25]~25" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[24]" is converted into an equivalent circuit using register "current_freq[24]~_emulated" and latch "current_freq[24]~29" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[23]" is converted into an equivalent circuit using register "current_freq[23]~_emulated" and latch "current_freq[23]~33" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[22]" is converted into an equivalent circuit using register "current_freq[22]~_emulated" and latch "current_freq[22]~37" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[21]" is converted into an equivalent circuit using register "current_freq[21]~_emulated" and latch "current_freq[21]~41" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[20]" is converted into an equivalent circuit using register "current_freq[20]~_emulated" and latch "current_freq[20]~45" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[19]" is converted into an equivalent circuit using register "current_freq[19]~_emulated" and latch "current_freq[19]~49" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[18]" is converted into an equivalent circuit using register "current_freq[18]~_emulated" and latch "current_freq[18]~53" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[17]" is converted into an equivalent circuit using register "current_freq[17]~_emulated" and latch "current_freq[17]~57" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[16]" is converted into an equivalent circuit using register "current_freq[16]~_emulated" and latch "current_freq[16]~61" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[15]" is converted into an equivalent circuit using register "current_freq[15]~_emulated" and latch "current_freq[15]~65" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[14]" is converted into an equivalent circuit using register "current_freq[14]~_emulated" and latch "current_freq[14]~69" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[13]" is converted into an equivalent circuit using register "current_freq[13]~_emulated" and latch "current_freq[13]~73" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[12]" is converted into an equivalent circuit using register "current_freq[12]~_emulated" and latch "current_freq[12]~77" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[11]" is converted into an equivalent circuit using register "current_freq[11]~_emulated" and latch "current_freq[11]~81" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[10]" is converted into an equivalent circuit using register "current_freq[10]~_emulated" and latch "current_freq[10]~85" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[9]" is converted into an equivalent circuit using register "current_freq[9]~_emulated" and latch "current_freq[9]~89" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[8]" is converted into an equivalent circuit using register "current_freq[8]~_emulated" and latch "current_freq[8]~93" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[7]" is converted into an equivalent circuit using register "current_freq[7]~_emulated" and latch "current_freq[7]~97" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[6]" is converted into an equivalent circuit using register "current_freq[6]~_emulated" and latch "current_freq[6]~101" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[5]" is converted into an equivalent circuit using register "current_freq[5]~_emulated" and latch "current_freq[5]~105" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[4]" is converted into an equivalent circuit using register "current_freq[4]~_emulated" and latch "current_freq[4]~109" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[3]" is converted into an equivalent circuit using register "current_freq[3]~_emulated" and latch "current_freq[3]~113" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[2]" is converted into an equivalent circuit using register "current_freq[2]~_emulated" and latch "current_freq[2]~117" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[1]" is converted into an equivalent circuit using register "current_freq[1]~_emulated" and latch "current_freq[1]~121" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
+    Warning (13310): Register "current_freq[0]" is converted into an equivalent circuit using register "current_freq[0]~_emulated" and latch "current_freq[0]~125" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 101
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 66 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "rst" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 4
-    Warning (15610): No output dependent on input pin "AWOff" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 11
-    Warning (15610): No output dependent on input pin "lower_limit[0]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[1]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[2]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[3]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[4]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[5]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[6]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[7]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[8]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[9]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[10]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[11]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[12]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[13]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[14]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[15]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[16]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[17]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[18]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[19]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[20]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[21]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[22]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[23]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[24]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[25]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[26]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[27]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[28]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[29]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[30]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "lower_limit[31]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 22
-    Warning (15610): No output dependent on input pin "upper_limit[0]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[1]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[2]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[3]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[4]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[5]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[6]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[7]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[8]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[9]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[10]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[11]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[12]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[13]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[14]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[15]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[16]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[17]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[18]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[19]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[20]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[21]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[22]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[23]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[24]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[25]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[26]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[27]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[28]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[29]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[30]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-    Warning (15610): No output dependent on input pin "upper_limit[31]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 23
-Info (21057): Implemented 807 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 263 input pins
-    Info (21059): Implemented 35 output pins
-    Info (21061): Implemented 509 logic cells
-Info (144001): Generated suppressed messages file C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/output_files/MotorControl.map.smsg
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 69 warnings
-    Info: Peak virtual memory: 4932 megabytes
-    Info: Processing ended: Wed Jul 06 20:42:03 2022
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:16
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/output_files/MotorControl.map.smsg.
+Warning (21074): Design contains 94 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CR[0]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[3]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[4]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[5]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[6]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[7]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[8]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[9]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[10]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[11]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[12]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[13]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[14]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[15]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[16]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[17]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[18]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[19]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[20]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[21]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[22]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[23]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[24]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[25]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[26]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[27]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[28]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[29]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "CR[30]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 6
+    Warning (15610): No output dependent on input pin "LS" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 9
+    Warning (15610): No output dependent on input pin "homing_speed_freq[0]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[1]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[2]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[3]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[4]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[5]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[6]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[7]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[8]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[9]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[10]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[11]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[12]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[13]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[14]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[15]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[16]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[17]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[18]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[19]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[20]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[21]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[22]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[23]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[24]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[25]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[26]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[27]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[28]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[29]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[30]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "homing_speed_freq[31]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 17
+    Warning (15610): No output dependent on input pin "home_location[0]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[1]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[2]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[3]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[4]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[5]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[6]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[7]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[8]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[9]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[10]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[11]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[12]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[13]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[14]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[15]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[16]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[17]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[18]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[19]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[20]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[21]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[22]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[23]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[24]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[25]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[26]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[27]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[28]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[29]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[30]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+    Warning (15610): No output dependent on input pin "home_location[31]" File: C:/Users/Luke/OneDrive - RMIT University/BH073-2022S2/Capstone/Quartus/MotorControl/MotorControl.v Line: 21
+Info (21057): Implemented 2212 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 356 input pins
+    Info (21059): Implemented 103 output pins
+    Info (21061): Implemented 1753 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 131 warnings
+    Info: Peak virtual memory: 4915 megabytes
+    Info: Processing ended: Wed Aug 03 18:39:08 2022
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:17
 
 
