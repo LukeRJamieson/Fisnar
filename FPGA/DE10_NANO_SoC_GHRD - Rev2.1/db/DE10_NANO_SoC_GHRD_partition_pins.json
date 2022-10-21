@@ -1,0 +1,337 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "MOTOR_X_CW",
+					"strict" : false
+				},
+				{
+					"name" : "MOTOR_X_CCW",
+					"strict" : false
+				},
+				{
+					"name" : "MOTOR_Y_CW",
+					"strict" : false
+				},
+				{
+					"name" : "MOTOR_Y_CCW",
+					"strict" : false
+				},
+				{
+					"name" : "MOTOR_Z_CW",
+					"strict" : false
+				},
+				{
+					"name" : "MOTOR_Z_CCW",
+					"strict" : false
+				},
+				{
+					"name" : "LED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RUN",
+					"strict" : false
+				},
+				{
+					"name" : "REAR_IO_OUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "REAR_IO_OUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "REAR_IO_OUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "REAR_IO_OUT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "REAR_IO_OUT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "REAR_IO_OUT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "REAR_IO_OUT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "REAR_IO_OUT[8]",
+					"strict" : false
+				},
+				{
+					"name" : "EXTRA_R[0]",
+					"strict" : false
+				},
+				{
+					"name" : "EXTRA_R[1]",
+					"strict" : false
+				},
+				{
+					"name" : "EXTRA_R[2]",
+					"strict" : false
+				},
+				{
+					"name" : "EXTRA_R[3]",
+					"strict" : false
+				},
+				{
+					"name" : "EXTRA_L[0]",
+					"strict" : false
+				},
+				{
+					"name" : "EXTRA_L[1]",
+					"strict" : false
+				},
+				{
+					"name" : "EXTRA_L[2]",
+					"strict" : false
+				},
+				{
+					"name" : "EXTRA_L[3]",
+					"strict" : false
+				},
+				{
+					"name" : "EXTRA_L[4]",
+					"strict" : false
+				},
+				{
+					"name" : "EXTRA_L[5]",
+					"strict" : false
+				},
+				{
+					"name" : "EXTRA_L[6]",
+					"strict" : false
+				},
+				{
+					"name" : "output_SCK",
+					"strict" : false
+				},
+				{
+					"name" : "SDI",
+					"strict" : false
+				},
+				{
+					"name" : "CONVSRT",
+					"strict" : false
+				},
+				{
+					"name" : "DIS",
+					"strict" : false
+				},
+				{
+					"name" : "LED[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[7]",
+					"strict" : false
+				},
+				{
+					"name" : "MOTOR_X_AWOFF",
+					"strict" : false
+				},
+				{
+					"name" : "MOTOR_Y_AWOFF",
+					"strict" : false
+				},
+				{
+					"name" : "MOTOR_Z_AWOFF",
+					"strict" : false
+				},
+				{
+					"name" : "TEACH[0]",
+					"strict" : false
+				},
+				{
+					"name" : "TEACH[1]",
+					"strict" : false
+				},
+				{
+					"name" : "TEACH[2]",
+					"strict" : false
+				},
+				{
+					"name" : "TEACH[3]",
+					"strict" : false
+				},
+				{
+					"name" : "TEACH[4]",
+					"strict" : false
+				},
+				{
+					"name" : "TEACH[5]",
+					"strict" : false
+				},
+				{
+					"name" : "TEACH[6]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_CLK1_50",
+					"strict" : false
+				},
+				{
+					"name" : "serial_SDO",
+					"strict" : false
+				},
+				{
+					"name" : "SW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[3]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LIMIT_SWITCH_X",
+					"strict" : false
+				},
+				{
+					"name" : "LIMIT_SWITCH_Y",
+					"strict" : false
+				},
+				{
+					"name" : "LIMIT_SWITCH_Z",
+					"strict" : false
+				},
+				{
+					"name" : "TEACH_SWITCH",
+					"strict" : false
+				},
+				{
+					"name" : "PANEL_EMG",
+					"strict" : false
+				},
+				{
+					"name" : "EXT_CONN_DOOR_NO",
+					"strict" : false
+				},
+				{
+					"name" : "EXT_CONN_EMG",
+					"strict" : false
+				},
+				{
+					"name" : "PANEL_START",
+					"strict" : false
+				},
+				{
+					"name" : "EXT_CONN_DOOR_NC",
+					"strict" : false
+				},
+				{
+					"name" : "EXT_CONN_START",
+					"strict" : false
+				},
+				{
+					"name" : "REAR_IO_IN[1]",
+					"strict" : false
+				},
+				{
+					"name" : "REAR_IO_IN[2]",
+					"strict" : false
+				},
+				{
+					"name" : "REAR_IO_IN[3]",
+					"strict" : false
+				},
+				{
+					"name" : "REAR_IO_IN[4]",
+					"strict" : false
+				},
+				{
+					"name" : "REAR_IO_IN[5]",
+					"strict" : false
+				},
+				{
+					"name" : "REAR_IO_IN[6]",
+					"strict" : false
+				},
+				{
+					"name" : "REAR_IO_IN[7]",
+					"strict" : false
+				},
+				{
+					"name" : "REAR_IO_IN[8]",
+					"strict" : false
+				},
+				{
+					"name" : "PROG_ONES[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PROG_ONES[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PROG_ONES[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PROG_ONES[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PROG_TENS[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PROG_TENS[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PROG_TENS[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PROG_TENS[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

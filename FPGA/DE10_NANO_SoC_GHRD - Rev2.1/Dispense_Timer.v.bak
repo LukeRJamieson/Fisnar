@@ -1,0 +1,9 @@
+module Dispense_Timer
+(
+input FPGA_CLK1_50,
+input [25:0] timer,
+input start_timer,
+output dispense_sig,
+output done
+)
+

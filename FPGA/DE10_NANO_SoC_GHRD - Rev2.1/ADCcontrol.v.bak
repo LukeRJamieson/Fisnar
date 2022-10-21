@@ -1,0 +1,183 @@
+module ADCcontrol(
+input FPGA_CLK1_50, // From FPGA
+input wire serial_SDO, // From ADC
+input reset_n, // From user key
+input convClock, //512kHz clock to sync conversions
+input [7:0]FFTindex1, //////////////////////////////////////////////////////////////////////////
+input [7:0]FFTindex2,
+input [7:0]FFTindex3,
+input [7:0]FFTindex4,
+
+output output_SCK, //To ADC 40MHz
+output reg SDI,	// To ADC
+output reg CONVSRT, // To ADC
+
+output [11:0]ADC1,
+output [11:0]ADC2,
+output [11:0]ADC3,
+output [11:0]ADC4
+
+);
+
+
+reg [11:0]ADC_ADDR;
+reg [1:0]ChannelCounter; //CH select
+reg [7:0]ADCindex; //FIFO buffer counter ////////////////////////////////////////////////////////
+
+// State Parameters //
+parameter ConvStart = 3'b000;
+parameter ConvWait = 3'b001;
+parameter Prepare = 3'b011;
+parameter SendAddr = 3'b010;
+parameter Wait = 3'b110;
+
+
+
+wire SCK;
+
+reg sending;
+reg [3:0]currentState;
+reg [3:0]nextState;
+reg [7:0]bitcounter;
+reg [5:0]convwaitcounter;
+reg [11:0]ADCResult[3:0][255:0]; //originally 255 /////////////////////////////////////////////////////////
+reg [11:0]Result;
+
+
+reg [11:0]SDO;
+
+ADCclock adcclk_inst(
+	.refclk(FPGA_CLK1_50), 
+	.rst(~reset_n), 
+	.outclk_0(SCK)
+	);
+
+always @ (posedge(SCK))
+	begin: nextStateLogic
+		currentState <= nextState;
+	
+	end
+	
+always @ (currentState,bitcounter,convwaitcounter,reset_n,convClock)
+	begin: currentStateLogic
+		case(currentState)
+			ConvStart:
+				begin
+					if(!reset_n)
+						nextState = ConvWait;
+					else
+						nextState = ConvWait;
+				end
+			ConvWait:
+				begin
+					if(!reset_n)
+						nextState = ConvWait;
+					else if(convwaitcounter == 0)
+						nextState = Prepare;
+					else
+						nextState = ConvWait;
+				end
+				
+			Prepare:
+				begin
+					if(!reset_n)
+						nextState = ConvWait;
+					else
+						nextState = SendAddr;
+				end			
+				
+			SendAddr:
+				begin
+					if(!reset_n)
+						nextState = ConvWait;
+					else if (bitcounter == 0)
+						nextState = Wait;
+					else 
+						nextState = SendAddr;
+				end
+			Wait:
+				begin
+					if(!reset_n)
+						nextState = ConvWait;
+					else if (convClock == 1)
+						nextState = ConvStart;
+					else
+						nextState = Wait; 
+				end
+			default: nextState = ConvStart;
+		endcase
+	
+	end
+
+// Update address sending on Negative Egde	
+always @ (negedge(SCK))
+	begin: outputLogic
+		case(currentState)
+			ConvStart:
+				begin
+					sending <= 0;
+					CONVSRT <= 1;
+					convwaitcounter <= 6'd60; // 1.5us //3us
+
+					ADCResult[ChannelCounter][ADCindex] <= Result; 
+					ADCResult[ChannelCounter][ADCindex] <= Result;
+					ADCResult[ChannelCounter][ADCindex] <= Result;
+					ADCResult[ChannelCounter][ADCindex] <= Result;
+
+				ChannelCounter <= ChannelCounter + 2'd1;
+				if(ChannelCounter == 0)
+					ADCindex = ADCindex + 8'd1;
+						
+				ADC_ADDR <= {2'b10,ChannelCounter,8'b00000000};
+				
+				end
+			ConvWait:
+				begin
+					sending <= 0;
+					CONVSRT <= 0;
+					convwaitcounter <= convwaitcounter - 6'd1;
+					bitcounter <= 4'd12;
+				end
+			Prepare:
+				begin
+					SDI <= ADC_ADDR[bitcounter];
+				end
+				
+			SendAddr:
+				begin
+					sending <= 1;
+					CONVSRT <= 0;
+					SDI <= ADC_ADDR[bitcounter-1];
+					bitcounter <= bitcounter - 8'd1;
+				end
+			Wait:
+				begin
+					sending <= 0;
+					CONVSRT <= 0;
+					Result <= SDO[11:0];
+				end
+			default: nextState <= ConvStart;
+		endcase
+	end
+
+// Read incoming data on positive edge	
+always @ (posedge(SCK))
+	begin
+		if(sending)
+			begin	
+				SDO[bitcounter] <= serial_SDO;
+			end
+	end
+
+assign output_SCK = sending ? SCK : 1'b0;
+
+assign ADC1 = ADCResult[0][FFTindex1];
+assign ADC2 = ADCResult[1][FFTindex2];
+assign ADC3 = ADCResult[2][FFTindex3];
+assign ADC4 = ADCResult[3][FFTindex4];
+
+
+endmodule
+
+
+
